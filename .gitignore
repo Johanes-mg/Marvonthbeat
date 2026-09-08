@@ -18,6 +18,7 @@ ehthumbs.db
 
 # Fichiers de code temporaires
 code_source.txt
+code.txt
 *.txt
 *.log
 *.tmp

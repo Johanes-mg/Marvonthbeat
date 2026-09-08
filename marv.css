@@ -75,7 +75,6 @@ body {
   height: 24px;
 }
 
-/* ============ NAVIGATION ============ */
 .navigation {
   position: fixed;
   bottom: 10px;
@@ -143,7 +142,6 @@ body {
   height: 20px;
 }
 
-/* ============ HERO ============ */
 .hero {
   padding: 30px 0 20px 0;
 }
@@ -190,7 +188,6 @@ body {
   object-fit: cover;
 }
 
-/* ============ BIO ============ */
 .bio {
   color: #ccc;
   font-size: 15px;
@@ -203,7 +200,6 @@ body {
   margin-bottom: 15px;
 }
 
-/* ============ BOUTON YOUTUBE ============ */
 .youtube-button-container {
   display: flex;
   justify-content: center;
@@ -237,7 +233,6 @@ body {
   filter: brightness(0) invert(1);
 }
 
-/* ============ SERVICES ============ */
 .services {
   margin-bottom: 20px;
 }
@@ -278,7 +273,6 @@ body {
   line-height: 1.6;
 }
 
-/* ============ RECHERCHE ============ */
 .recherche-container {
   display: flex;
   gap: 12px;
@@ -318,7 +312,6 @@ body {
   height: 20px;
 }
 
-/* ============ FILTRES ============ */
 .filtres-container {
   display: flex;
   flex-wrap: wrap;
@@ -345,7 +338,6 @@ body {
   border-color: #38bdf8;
 }
 
-/* ============ BIBLIOTHEQUE ============ */
 .bibliotheque {
   margin-top: 10px;
 }
@@ -410,7 +402,6 @@ body {
   gap: 8px;
 }
 
-/* ============ CONTACT ============ */
 .contact-section {
   padding: 10px 0;
 }
@@ -448,7 +439,6 @@ body {
   background: #1a2a3a;
 }
 
-/* Contacts inactifs (grisés) */
 .contact-item.contact-inactif {
   opacity: 0.4;
   cursor: not-allowed;
@@ -493,7 +483,6 @@ body {
   opacity: 0.9;
 }
 
-/* Couleurs des boutons par plateforme */
 .btn-envoyer.whatsapp {
   background: #25d366;
 }
@@ -518,7 +507,6 @@ body {
   opacity: 1;
 }
 
-/* ============ RESPONSIVE ============ */
 @media (min-width: 580px) {
   body {
     padding: 25px 25px 80px 25px;
@@ -643,7 +631,6 @@ body {
   }
 }
 
-/* ============ THEME CLAIR ============ */
 body.theme-clair {
   background: #f5f5f5;
   color: #1a1a2e;
