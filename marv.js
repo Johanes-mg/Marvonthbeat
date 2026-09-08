@@ -1,7 +1,7 @@
 "use strict";
 
-// ============ DONNÉES MUSICALES ============
-// Liste vide pour que Marv puisse importer ses musiques plus tard
+// ============ DONNEES MUSICALES ============
+// Ce tableau sera mis a jour automatiquement par l'APK via GitHub
 const TITRES = [];
 
 let musiqueFiltree = [...TITRES];
@@ -54,7 +54,7 @@ function afficherMusiques() {
       </div>
       <div class="musique-actions">
         <span class="musique-duree">${musique.duree}</span>
-        <button class="btn-ecouter-musique" data-index="${index}">Écouter</button>
+        <button class="btn-ecouter-musique" data-index="${index}">Ecouter</button>
       </div>
     `;
     listeMusique.appendChild(li);
@@ -67,7 +67,14 @@ function afficherMusiques() {
       const musique = musiqueFiltree[idx];
       const originalIndex = TITRES.indexOf(musique);
       if (originalIndex !== -1) {
-        alert("Lecture de " + musique.nom + " (simulation)");
+        const audioUrl = musique.filename ? 
+          "https://raw.githubusercontent.com/Johanes-mg/Marvonthbeat/main/audio/" + musique.filename :
+          null;
+        if (audioUrl) {
+          window.open(audioUrl, "_blank");
+        } else {
+          alert("Lecture de " + musique.nom + " (fichier non disponible)");
+        }
       }
     });
   });
@@ -135,7 +142,6 @@ function filtrerParCategorie(categorie) {
 
 // ============ CONTACT ============
 function selectionnerContact(methode) {
-  // Vérifier si le contact est actif
   if (!CONTACTS_ACTIFS.includes(methode)) {
     alert("Ce moyen de contact n'est pas encore disponible.");
     return;
@@ -165,11 +171,10 @@ function selectionnerContact(methode) {
 
 function envoyerContact() {
   if (!contactSelectionne) {
-    alert("Veuillez sélectionner un moyen de contact d'abord.");
+    alert("Veuillez selectionner un moyen de contact d'abord.");
     return;
   }
 
-  // Vérifier si le contact est actif
   if (!CONTACTS_ACTIFS.includes(contactSelectionne)) {
     alert("Ce moyen de contact n'est pas encore disponible.");
     return;
@@ -188,7 +193,7 @@ function envoyerContact() {
   }
 }
 
-// ============ THÈME ============
+// ============ THEME ============
 let themeSombre = true;
 
 function basculerTheme() {
