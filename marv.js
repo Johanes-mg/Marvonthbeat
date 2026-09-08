@@ -1,12 +1,18 @@
 "use strict";
 
 // ============ DONNEES MUSICALES ============
+<<<<<<< HEAD
 // Ajoute tes musiques ici dans ce format :
 // { id: 1, nom: "Titre", artiste: "Marv", duree: "3:24", categorie: "electro", fichier: "nom_fichier.mp3" }
 const TITRES = [
   // Exemple :
   // { id: 1, nom: "Sunset Vibes", artiste: "Marv", duree: "3:24", categorie: "electro", fichier: "sunset_vibes.mp3" },
 ];
+=======
+// Ce tableau sera mis a jour automatiquement par l'APK via GitHub
+const TITRES = [
+  { id: 1788896167305, nom: "Nightcore", artiste: "Nisekoi", duree: "3:00", categorie: "Nightcore", cover: "default-cover.png", filename: "Summer Wind.mp3" },];
+>>>>>>> 67614ada10e1a0ebe4f9ef2139950444bdee6207
 
 let musiqueFiltree = [...TITRES];
 let categorieActuelle = "tous";
