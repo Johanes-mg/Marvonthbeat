@@ -1,0 +1,67 @@
+# Fichiers système
+.DS_Store
+Thumbs.db
+desktop.ini
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+
+# Fichiers de l'éditeur
+.vscode/
+.vscode/**/*
+.idea/
+*.swp
+*.swo
+*~
+*.sublime-project
+*.sublime-workspace
+
+# Fichiers de code temporaires
+code_source.txt
+*.txt
+*.log
+*.tmp
+*.bak
+*.backup
+*.old
+*_backup.html
+*_backup.css
+*_backup.js
+
+# Fichiers de sauvegarde automatique
+*.save
+*.orig
+
+# Dossiers de build
+node_modules/
+dist/
+build/
+out/
+*.min.js
+*.min.css
+
+# Fichiers de configuration personnelle
+.env
+.env.local
+.env.*.local
+
+# Fichiers de compression
+*.zip
+*.rar
+*.7z
+*.tar
+*.gz
+
+# Fichiers d'images temporaires
+*.tmp.png
+*.tmp.jpg
+*.tmp.webp
+
+# Fichiers de cache
+.cache/
+*.cache
+
+# Fichiers de package
+package-lock.json
+yarn.lock
+composer.lock

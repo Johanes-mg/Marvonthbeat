@@ -1,0 +1,315 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Marv - Producteur Musical" />
+    <meta name="keywords" content="producteur, musique, beatmaker, marv" />
+    <meta name="author" content="Marv" />
+
+    <meta property="og:title" content="Marv - Producteur Musical" />
+    <meta property="og:description" content="Créez l'ambiance avec Marv" />
+    <meta property="og:image" content="./images/og-image.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <title>marvonthebeat</title>
+    <link rel="shortcut icon" href="./images/logo.png" type="image/png" />
+
+    <link rel="stylesheet" href="./marv.css" />
+  </head>
+
+  <body>
+    <nav class="navigation" aria-label="Navigation principale">
+      <ul class="liste-navigation">
+        <li class="item-nav">
+          <button class="lien-nav actif" data-page-nav aria-current="page">
+            Accueil
+          </button>
+        </li>
+        <li class="item-nav">
+          <button class="lien-nav" data-page-nav>Musique</button>
+        </li>
+        <li class="item-nav">
+          <button class="lien-nav" data-page-nav>Contact</button>
+        </li>
+      </ul>
+      <button
+        class="btn-theme"
+        onclick="basculerTheme()"
+        aria-label="Changer de thème"
+      >
+        <img
+          src="./images/icone-soleil.png"
+          id="theme-icon"
+          width="22"
+          height="22"
+          loading="lazy"
+        />
+      </button>
+    </nav>
+
+    <div class="page page-accueil actif" data-page="accueil">
+      <header class="hero">
+        <div class="hero-contenu">
+          <div class="hero-gauche">
+            <h1 class="nom-artiste">Lovatiana Nathanaël</h1>
+            <p class="sous-titre">marvonthebeat</p>
+          </div>
+          <div class="hero-droite">
+            <div class="cadre-avatar">
+              <img
+                src="./images/avatar.png"
+                id="avatar-img"
+                width="200"
+                height="200"
+                loading="lazy"
+              />
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <section class="bio">
+        <p>
+          Marv est un jeune producteur musical passionné par la création de sons
+          uniques et immersifs. Avec une expérience dans divers genres musicaux,
+          il propose des compositions originales pour les artistes, les
+          vidéastes et tous les amoureux de la musique.
+        </p>
+        <p>
+          Son univers musical se caractérise par des mélodies captivantes, des
+          rythmes entraînants et une recherche constante d'émotion. Marv
+          collabore avec des artistes de la scène locale et internationale pour
+          donner vie à des projets audacieux.
+        </p>
+      </section>
+
+      <section class="services">
+        <h3 class="titre-service">Services</h3>
+        <ul class="liste-services">
+          <li class="item-service">
+            <div class="boite-icone-service">
+              <img
+                src="./images/icone-beat.png"
+                width="40"
+                height="40"
+                loading="lazy"
+              />
+            </div>
+            <div class="contenu-service">
+              <h4 class="titre-item-service">Création de beats</h4>
+              <p class="texte-service">
+                Production de beats personnalisés pour vos projets musicaux.
+              </p>
+            </div>
+          </li>
+          <li class="item-service">
+            <div class="boite-icone-service">
+              <img
+                src="./images/icone-mix.png"
+                width="40"
+                height="40"
+                loading="lazy"
+              />
+            </div>
+            <div class="contenu-service">
+              <h4 class="titre-item-service">Mixage &amp; Mastering</h4>
+              <p class="texte-service">
+                Service professionnel de mixage et mastering pour vos morceaux.
+              </p>
+            </div>
+          </li>
+          <li class="item-service">
+            <div class="boite-icone-service">
+              <img
+                src="./images/icone-collab.png"
+                width="40"
+                height="40"
+                loading="lazy"
+              />
+            </div>
+            <div class="contenu-service">
+              <h4 class="titre-item-service">Collaboration artistique</h4>
+              <p class="texte-service">
+                Accompagnement et co-création pour vos projets musicaux.
+              </p>
+            </div>
+          </li>
+        </ul>
+      </section>
+    </div>
+
+    <div class="page page-musique" data-page="musique">
+      <!-- Barre de recherche -->
+      <div class="recherche-container">
+        <input
+          type="text"
+          id="recherche-input"
+          placeholder="Rechercher un titre..."
+          class="recherche-input"
+        />
+        <button class="btn-recherche" onclick="rechercherTitre()">
+          <img
+            src="./images/icone-search.png"
+            width="20"
+            height="20"
+            loading="lazy"
+          />
+        </button>
+      </div>
+
+      <!-- Filtres par catégorie -->
+      <div class="filtres-container">
+        <button
+          class="filtre-btn actif"
+          data-categorie="tous"
+          onclick="filtrerParCategorie('tous')"
+        >
+          Tous
+        </button>
+        <button
+          class="filtre-btn"
+          data-categorie="electro"
+          onclick="filtrerParCategorie('electro')"
+        >
+          Électro
+        </button>
+        <button
+          class="filtre-btn"
+          data-categorie="ambient"
+          onclick="filtrerParCategorie('ambient')"
+        >
+          Ambient
+        </button>
+        <button
+          class="filtre-btn"
+          data-categorie="hiphop"
+          onclick="filtrerParCategorie('hiphop')"
+        >
+          Hip-Hop
+        </button>
+        <button
+          class="filtre-btn"
+          data-categorie="lofi"
+          onclick="filtrerParCategorie('lofi')"
+        >
+          Lo-Fi
+        </button>
+      </div>
+
+      <!-- Liste des musiques -->
+      <section class="bibliotheque">
+        <ul class="liste-musique" id="liste-musique"></ul>
+      </section>
+    </div>
+
+    <div class="page page-contact" data-page="contact">
+      <section class="contact-section">
+        <p class="contact-intro">Choisissez votre moyen de contact préféré :</p>
+
+        <div class="contact-grid">
+          <div
+            class="contact-item"
+            data-contact="whatsapp"
+            onclick="selectionnerContact('whatsapp')"
+          >
+            <div class="boite-icone">
+              <img
+                src="./images/web/icone-whatsapp.png"
+                width="24"
+                height="24"
+                loading="lazy"
+              />
+            </div>
+            <div class="contact-info">
+              <span class="contact-label">WhatsApp</span>
+              <span class="contact-valeur">+261 XX XXX XX</span>
+            </div>
+          </div>
+
+          <div
+            class="contact-item"
+            data-contact="email"
+            onclick="selectionnerContact('email')"
+          >
+            <div class="boite-icone">
+              <img
+                src="./images/web/icone-email.png"
+                width="24"
+                height="24"
+                loading="lazy"
+              />
+            </div>
+            <div class="contact-info">
+              <span class="contact-label">Email</span>
+              <span class="contact-valeur">marv@music.com</span>
+            </div>
+          </div>
+
+          <div
+            class="contact-item"
+            data-contact="facebook"
+            onclick="selectionnerContact('facebook')"
+          >
+            <div class="boite-icone">
+              <img
+                src="./images/web/icone-facebook.png"
+                width="24"
+                height="24"
+                loading="lazy"
+              />
+            </div>
+            <div class="contact-info">
+              <span class="contact-label">Facebook</span>
+              <span class="contact-valeur">Marv Music</span>
+            </div>
+          </div>
+
+          <div
+            class="contact-item"
+            data-contact="instagram"
+            onclick="selectionnerContact('instagram')"
+          >
+            <div class="boite-icone">
+              <img
+                src="./images/web/icone-instagram.png"
+                width="24"
+                height="24"
+                loading="lazy"
+              />
+            </div>
+            <div class="contact-info">
+              <span class="contact-label">Instagram</span>
+              <span class="contact-valeur">@marv_music</span>
+            </div>
+          </div>
+
+          <div
+            class="contact-item"
+            data-contact="youtube"
+            onclick="selectionnerContact('youtube')"
+          >
+            <div class="boite-icone">
+              <img
+                src="./images/web/icone-youtube.png"
+                width="24"
+                height="24"
+                loading="lazy"
+              />
+            </div>
+            <div class="contact-info">
+              <span class="contact-label">YouTube</span>
+              <span class="contact-valeur">Marv Music</span>
+            </div>
+          </div>
+        </div>
+
+        <button class="btn-envoyer" id="btn-envoyer" onclick="envoyerContact()">
+          <span>Envoyer</span>
+        </button>
+      </section>
+    </div>
+
+    <script src="./marv.js" defer></script>
+  </body>
+</html>
