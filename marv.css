@@ -196,11 +196,45 @@ body {
   font-size: 15px;
   font-weight: 300;
   line-height: 1.8;
-  margin-bottom: 40px;
+  margin-bottom: 30px;
   margin-top: 20px;
 }
 .bio p {
   margin-bottom: 15px;
+}
+
+/* ============ BOUTON YOUTUBE ============ */
+.youtube-button-container {
+  display: flex;
+  justify-content: center;
+  margin: 30px 0 40px 0;
+}
+
+.btn-youtube {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  background: #ff0000;
+  color: #fff;
+  padding: 14px 32px;
+  border-radius: 30px;
+  font-size: 18px;
+  font-weight: 600;
+  transition:
+    background 0.3s ease,
+    transform 0.2s ease;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+}
+.btn-youtube:hover {
+  background: #cc0000;
+  transform: scale(1.05);
+}
+.btn-youtube img {
+  width: 24px;
+  height: 24px;
+  filter: brightness(0) invert(1);
 }
 
 /* ============ SERVICES ============ */
@@ -548,6 +582,10 @@ body {
   .contact-grid {
     grid-template-columns: 1fr;
   }
+  .btn-youtube {
+    font-size: 15px;
+    padding: 12px 24px;
+  }
 }
 
 @media (max-width: 480px) {
@@ -589,6 +627,15 @@ body {
   .item-musique .musique-actions {
     width: 100%;
     justify-content: flex-end;
+  }
+  .btn-youtube {
+    font-size: 13px;
+    padding: 10px 18px;
+    gap: 8px;
+  }
+  .btn-youtube img {
+    width: 18px;
+    height: 18px;
   }
 }
 
@@ -640,6 +687,13 @@ body.theme-clair .cadre-avatar {
 
 body.theme-clair .bio {
   color: #2a2a4a;
+}
+
+body.theme-clair .btn-youtube {
+  background: #cc0000;
+}
+body.theme-clair .btn-youtube:hover {
+  background: #b30000;
 }
 
 body.theme-clair .item-service {
