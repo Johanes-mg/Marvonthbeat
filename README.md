@@ -4,7 +4,7 @@
 
 Site vitrine pour un jeune producteur musical.
 
-**Lien du site :** [https://johanes-mg.github.io/Marvonthbeat/](https://johanes-mg.github.io/Marvonthbeat/)
+**Lien du site :** [https://johanes-mg.github.io/Marvonthebeat/](https://johanes-mg.github.io/Marvonthebeat/)
 
 ![YouTube](https://img.shields.io/badge/YouTube-FF0000?style=flat-square&logo=youtube&logoColor=white)
 ![Facebook](https://img.shields.io/badge/Facebook-1877F2?style=flat-square&logo=facebook&logoColor=white)
