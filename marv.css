@@ -409,6 +409,20 @@ body {
   border-color: #38bdf8;
   background: #1a2a3a;
 }
+
+/* Contacts inactifs (grisés) */
+.contact-item.contact-inactif {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+.contact-item.contact-inactif:hover {
+  background: #222;
+}
+.contact-item.contact-inactif.selectionne {
+  border-color: transparent;
+  background: #222;
+}
+
 .contact-info {
   display: flex;
   flex-direction: column;
@@ -422,6 +436,10 @@ body {
 .contact-valeur {
   color: #fff;
   font-size: 15px;
+}
+
+.contact-item.contact-inactif .contact-valeur {
+  color: rgba(204, 204, 204, 0.3);
 }
 
 .btn-envoyer {
@@ -452,6 +470,14 @@ body {
 }
 .btn-envoyer.youtube {
   background: #ff0000;
+}
+
+.btn-envoyer.inactif {
+  background: #555;
+  cursor: not-allowed;
+}
+.btn-envoyer.inactif:hover {
+  opacity: 1;
 }
 
 /* ============ RESPONSIVE ============ */
@@ -694,6 +720,16 @@ body.theme-clair .contact-intro {
   color: #2a2a4a;
 }
 
+body.theme-clair .contact-item.contact-inactif {
+  opacity: 0.4;
+}
+body.theme-clair .contact-item.contact-inactif:hover {
+  background: #ffffff;
+}
+body.theme-clair .contact-item.contact-inactif .contact-valeur {
+  color: rgba(26, 26, 46, 0.3);
+}
+
 body.theme-clair .boite-icone {
   background: #e8edf8;
 }
@@ -715,4 +751,7 @@ body.theme-clair .btn-envoyer.instagram {
 }
 body.theme-clair .btn-envoyer.youtube {
   background: #ff0000;
+}
+body.theme-clair .btn-envoyer.inactif {
+  background: #999;
 }

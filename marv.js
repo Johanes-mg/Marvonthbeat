@@ -8,6 +8,9 @@ let musiqueFiltree = [...TITRES];
 let categorieActuelle = "tous";
 let contactSelectionne = null;
 
+// Contacts actifs
+const CONTACTS_ACTIFS = ["whatsapp", "youtube"];
+
 // ============ NAVIGATION ============
 const liensNavigation = document.querySelectorAll("[data-page-nav]");
 const pages = document.querySelectorAll("[data-page]");
@@ -132,6 +135,12 @@ function filtrerParCategorie(categorie) {
 
 // ============ CONTACT ============
 function selectionnerContact(methode) {
+  // Vérifier si le contact est actif
+  if (!CONTACTS_ACTIFS.includes(methode)) {
+    alert("Ce moyen de contact n'est pas encore disponible.");
+    return;
+  }
+
   contactSelectionne = methode;
 
   document.querySelectorAll(".contact-item").forEach(function (item) {
@@ -160,15 +169,23 @@ function envoyerContact() {
     return;
   }
 
+  // Vérifier si le contact est actif
+  if (!CONTACTS_ACTIFS.includes(contactSelectionne)) {
+    alert("Ce moyen de contact n'est pas encore disponible.");
+    return;
+  }
+
   const liens = {
-    whatsapp: "https://wa.me/261XXXXXXXXX",
-    email: "mailto:marv@music.com",
-    facebook: "https://facebook.com/marvmusic",
-    instagram: "https://instagram.com/marv_music",
-    youtube: "https://youtube.com/@MarvMusic",
+    whatsapp: "https://wa.me/261348908400",
+    email: "#",
+    facebook: "#",
+    instagram: "#",
+    youtube: "https://www.youtube.com/@MarVOntheBeats",
   };
 
-  window.open(liens[contactSelectionne], "_blank");
+  if (liens[contactSelectionne] && liens[contactSelectionne] !== "#") {
+    window.open(liens[contactSelectionne], "_blank");
+  }
 }
 
 // ============ THÈME ============
