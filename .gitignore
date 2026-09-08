@@ -65,3 +65,11 @@ out/
 package-lock.json
 yarn.lock
 composer.lock
+
+# Dossier musique (fichiers audio)
+Music/
+*.mp3
+*.wav
+*.flac
+*.aac
+*.ogg

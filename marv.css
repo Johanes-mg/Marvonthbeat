@@ -381,6 +381,10 @@ body {
   font-size: 15px;
   font-weight: 500;
 }
+.item-musique .musique-categorie {
+  color: rgba(204, 204, 204, 0.4);
+  font-size: 12px;
+}
 .item-musique .musique-duree {
   color: rgba(204, 204, 204, 0.4);
   font-size: 13px;
@@ -748,6 +752,9 @@ body.theme-clair .item-musique:hover {
 }
 body.theme-clair .item-musique .musique-nom {
   color: #1a1a2e;
+}
+body.theme-clair .item-musique .musique-categorie {
+  color: rgba(26, 26, 46, 0.4);
 }
 body.theme-clair .btn-ecouter-musique {
   background: #e8edf8;

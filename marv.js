@@ -1,8 +1,12 @@
 "use strict";
 
 // ============ DONNEES MUSICALES ============
-// Ce tableau sera mis a jour automatiquement par l'APK via GitHub
-const TITRES = [];
+// Ajoute tes musiques ici dans ce format :
+// { id: 1, nom: "Titre", artiste: "Marv", duree: "3:24", categorie: "electro", fichier: "nom_fichier.mp3" }
+const TITRES = [
+  // Exemple :
+  // { id: 1, nom: "Sunset Vibes", artiste: "Marv", duree: "3:24", categorie: "electro", fichier: "sunset_vibes.mp3" },
+];
 
 let musiqueFiltree = [...TITRES];
 let categorieActuelle = "tous";
@@ -51,6 +55,7 @@ function afficherMusiques() {
     li.innerHTML = `
       <div class="musique-info">
         <span class="musique-nom">${musique.nom}</span>
+        <span class="musique-categorie">${musique.categorie}</span>
       </div>
       <div class="musique-actions">
         <span class="musique-duree">${musique.duree}</span>
@@ -67,13 +72,14 @@ function afficherMusiques() {
       const musique = musiqueFiltree[idx];
       const originalIndex = TITRES.indexOf(musique);
       if (originalIndex !== -1) {
-        const audioUrl = musique.filename ? 
-          "https://raw.githubusercontent.com/Johanes-mg/Marvonthbeat/main/audio/" + musique.filename :
-          null;
+        const audioUrl = musique.fichier ? "./Music/" + musique.fichier : null;
         if (audioUrl) {
-          window.open(audioUrl, "_blank");
+          const audio = new Audio(audioUrl);
+          audio.play().catch(function () {
+            alert("Impossible de lire " + musique.nom);
+          });
         } else {
-          alert("Lecture de " + musique.nom + " (fichier non disponible)");
+          alert("Fichier non disponible pour " + musique.nom);
         }
       }
     });
