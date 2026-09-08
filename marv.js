@@ -2,7 +2,8 @@
 
 // ============ DONNEES MUSICALES ============
 // Ce tableau sera mis a jour automatiquement par l'APK via GitHub
-const TITRES = [];
+const TITRES = [
+  { id: 1788896167305, nom: "Nightcore", artiste: "Nisekoi", duree: "3:00", categorie: "Nightcore", cover: "default-cover.png", filename: "Summer Wind.mp3" },];
 
 let musiqueFiltree = [...TITRES];
 let categorieActuelle = "tous";
